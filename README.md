@@ -259,11 +259,11 @@ Thank you for contributing to **RSTF**!
 
 ## Author
 
-**William Nathanael** ([@aarchiev](https://github.com/aarchiev))
+**William Nathanael** (`@aarchiev`)
 
 > **Note on Project Migration:**  This repository is the official and current home of the **rstf-rust** project. 
-> Development has been migrated to this account ([@aarchiev](https://github.com/aarchiev)) following access 
-> issues with the previous legacy profile ([@warchs](https://github.com/warchs)). 
+> Development has been migrated to this account (`@aarchiev`) following access 
+> issues with the previous legacy profile (`@warchs`). 
 > 
 > All future updates, security patches, and releases will be published here.
 ---
@@ -277,9 +277,9 @@ A big thank you to the **Rust programming language** and its incredible communit
 * **Rand** for cryptographically secure random number generation.
 * And the broader open-source community for tools like `cross` for cross-compilation and **GitHub** Actions for **CI/CD**.
 
-Your contributions keep the **Rust ecosystem thriving**—thank you! If you've contributed or inspired this project, feel free to reach out.
+Your contributions keep the **Rust ecosystem thriving**—thank you! If you've contributed or inspired this project, feel free to reach out. [Acknowledgments](ACKNOWLEDGMENTS.md)
 
-[Acknowledgments](ACKNOWLEDGMENTS.md)
+
 
 ---
 
