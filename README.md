@@ -1,20 +1,21 @@
-#### Rust Secure Transport Format
-
 <div align="center">
   <img src="https://raw.githubusercontent.com/warchs/warchs/refs/heads/main/image/rstf.png" width="400" alt="Logo">
 
   <br />
 
+  ## Rust Secure Transport Format
+
   [![Release](https://img.shields.io/github/v/release/aarchiev/rstf-rust)](https://github.com/aarchiev/rstf-rust/releases)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
   [![Platform](https://img.shields.io/badge/platform-Win%20%7C%20Linux%20%7C%20Mac%20%7C%20Android-green)](https://github.com/aarchiev/rstf-rust/releases)
   [![GitHub Stars](https://img.shields.io/github/stars/aarchiev/rstf-rust?style=social)](https://github.com/aarchiev/rstf-rust)
+
+  **RSTF** is a high-performance file archiving utility built in Rust, prioritizing data security through modern encryption and efficient compression. It leverages cutting-edge cryptographic standards to safeguard files against emerging threats.
+
+> --> Engineered for seamless cross-platform operation <--
+
 </div>
 
-
-**RSTF** is a high-performance file archiving utility built in Rust, prioritizing data security through modern encryption and efficient compression. It leverages cutting-edge cryptographic standards to safeguard files against emerging threats.
-
-> Engineered for seamless cross-platform operation
 
 ---
 
@@ -258,11 +259,11 @@ Thank you for contributing to **RSTF**!
 
 ## Author
 
-**William Nathanael** (@aarchiev)
+**William Nathanael** ([@aarchiev](https://github.com/aarchiev))
 
 > **Note on Project Migration:**  This repository is the official and current home of the **rstf-rust** project. 
-> Development has been migrated to this account (`@aarchiev`) following access 
-> issues with the previous legacy profile (`@warchs`). 
+> Development has been migrated to this account ([@aarchiev](https://github.com/aarchiev)) following access 
+> issues with the previous legacy profile ([@warchs](https://github.com/warchs)). 
 > 
 > All future updates, security patches, and releases will be published here.
 ---
@@ -278,6 +279,7 @@ A big thank you to the **Rust programming language** and its incredible communit
 
 Your contributions keep the **Rust ecosystem thriving**—thank you! If you've contributed or inspired this project, feel free to reach out.
 
+[Acknowledgments](ACKNOWLEDGMENTS.md)
 
 ---
 
