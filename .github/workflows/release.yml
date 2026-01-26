@@ -59,12 +59,12 @@ jobs:
             target: aarch64-linux-android
             binary_name: rstf
             asset_name: rstf-android-arm64
-            use_cross: true
+            use_cross: false
           - os: ubuntu-latest
             target: x86_64-linux-android
             binary_name: rstf
             asset_name: rstf-android-amd64
-            use_cross: true
+            use_cross: false
 
     steps:
       - name: Checkout code
@@ -90,6 +90,10 @@ jobs:
         with:
           packages: 'ndk;25.2.9519653'
 
+      - name: Install cargo-ndk
+        if: contains(matrix.target, 'android')
+        run: cargo install cargo-ndk
+
       - name: Setup Cross
         if: matrix.use_cross
         run: |
@@ -100,8 +104,15 @@ jobs:
       - name: Build
         shell: bash
         run: |
-          BUILD_CMD=${{ matrix.use_cross && 'cross' || 'cargo' }}
-          $BUILD_CMD build --release --target ${{ matrix.target }}
+          TARGET="${{ matrix.target }}"
+          if [[ "$TARGET" == *"android"* ]]; then
+            export ANDROID_NDK_HOME=$ANDROID_HOME/ndk/25.2.9519653
+            
+            cargo ndk -t $TARGET -p 24 build --release
+          else
+            BUILD_CMD=${{ matrix.use_cross && 'cross' || 'cargo' }}
+            $BUILD_CMD build --release --target $TARGET
+          fi
 
       - name: Post-process binary
         shell: bash
