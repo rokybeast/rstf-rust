@@ -1,4 +1,4 @@
-name: Cross-Platform Release
+name: Cross-Platform Release (TESTING)
 
 permissions:
   contents: write
@@ -108,7 +108,6 @@ jobs:
         run: |
           TARGET="${{ matrix.target }}"
           if [[ "$TARGET" == *"android"* ]]; then
-            export ANDROID_NDK_HOME=$ANDROID_HOME/ndk/25.2.9519653
             cargo ndk -t $TARGET -p 24 build --release
           else
             BUILD_CMD=${{ matrix.use_cross && 'cross' || 'cargo' }}
