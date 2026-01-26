@@ -5,8 +5,9 @@ permissions:
 
 on:
   push:
-    tags:
-      - "v*"
+    branches:
+      - "ci/9-test-android-ndk-linking"
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -107,7 +108,6 @@ jobs:
           TARGET="${{ matrix.target }}"
           if [[ "$TARGET" == *"android"* ]]; then
             export ANDROID_NDK_HOME=$ANDROID_HOME/ndk/25.2.9519653
-            
             cargo ndk -t $TARGET -p 24 build --release
           else
             BUILD_CMD=${{ matrix.use_cross && 'cross' || 'cargo' }}
@@ -123,8 +123,9 @@ jobs:
           fi
           mv "$BIN_PATH" "${{ matrix.asset_name }}"
 
-      - name: Release
-        uses: softprops/action-gh-release@v2
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
         with:
-          files: ${{ matrix.asset_name }}
-          fail_on_unmatched_files: true
+          name: binary-${{ matrix.asset_name }}
+          path: ${{ matrix.asset_name }}
+          retention-days: 1
