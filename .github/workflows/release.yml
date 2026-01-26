@@ -57,6 +57,8 @@ jobs:
             binary_name: rstf
             asset_name: rstf-macos-arm64
             use_cross: false
+          # --- ANDROID FIXED ---
+          # Kita kembalikan ke 'use_cross: true' karena lebih stabil untuk CI
           - os: ubuntu-latest
             target: aarch64-linux-android
             binary_name: rstf
@@ -86,6 +88,7 @@ jobs:
         if: contains(matrix.target, 'musl')
         run: sudo apt-get update && sudo apt-get install -y musl-tools
 
+      # Setup Cross jika diperlukan (Termasuk untuk Android sekarang)
       - name: Setup Cross
         if: matrix.use_cross
         run: |
@@ -93,6 +96,8 @@ jobs:
             cargo install cross --git https://github.com/cross-rs/cross
           fi
 
+      # Build Command yang Disederhanakan
+      # Tidak perlu install NDK manual, 'cross' akan menanganinya via Docker
       - name: Build
         shell: bash
         run: |
@@ -114,4 +119,3 @@ jobs:
           name: binary-${{ matrix.asset_name }}
           path: ${{ matrix.asset_name }}
           retention-days: 1
-
