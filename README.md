@@ -1,7 +1,4 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/warchs/warchs/refs/heads/main/image/rstf.png" width="400" alt="Logo">
-
-  <br />
 
   ## Rust Secure Transport Format
 
