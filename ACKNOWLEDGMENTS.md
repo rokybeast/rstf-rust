@@ -6,10 +6,10 @@ First and foremost, I would like to express my deepest gratitude to God for the 
 I also wish to dedicate this work to my parents. Their unwavering support, sacrifices, and prayers have been the foundation of my education and my journey into the world of technology and cybersecurity. Everything I achieve is built upon the values they taught me.
 
 ### Technical Credits
-This project, **rstf-rust**, stands on the shoulders of the global open-source community. I would like to acknowledge the following:
+This project, **rstf**, stands on the shoulders of the global open-source community. I would like to acknowledge the following:
 
 #### The Rust Ecosystem
-Special thanks to the Rust Foundation and the thousands of contributors who maintain the Rust programming language. Their commitment to memory safety and performance makes tools like RSTF possible.
+Special thanks to the Rust Foundation and the thousands of contributors who maintain the Rust programming language. Their commitment to memory safety and performance makes tools like **RSTF** possible.
 
 #### Core Libraries and Tools
 The following technologies were instrumental in the development of this project:
@@ -21,4 +21,4 @@ The following technologies were instrumental in the development of this project:
 Finally, I would like to thank the security researchers and developers whose commitment to data privacy and encryption protocols continues to inspire my work in cybersecurity.
 
 ---
-*Maintained by [aarchiev](https://github.com/aarchiev)*
+*Maintained by [aarchiev](https://github.com/aarchiev) & [mmcdonnel](https://github.com/mmcdonnel)*
